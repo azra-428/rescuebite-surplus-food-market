@@ -19,7 +19,7 @@ This document outlines the individual contributions, GitHub tracking history, Is
   * Authored the **Detailed Software Requirements Specification (SRS)** in [`docs/sprint2/SPRINT2_REPORT.md`](docs/sprint2/SPRINT2_REPORT.md) (`FR-01` through `FR-16`) and formalized core domain business rules (`BR-01` through `BR-08`).
   * Led **Product Backlog Refinement** with Scrum Master Anıl Güngör, expanding the backlog to 12 stories (`US-01`–`US-12`) and validating stakeholder acceptance criteria against UI/UX flows.
 * **Traceability Links:**
-  * **Sprint 1 GitHub Issue:** [Issue #4 - Project Proposal & Requirements Definition](https://github.com/macig102/rescuebite-surplus-food-market/issues/4)
+  * **Sprint 1 GitHub Issue:** [Issue #4 - Project Proposal & Requirements Definition](https://github.com/azra-428/rescuebite-surplus-food-market/issues/4)
   * **Sprint 2 GitHub Issue & Branch:** `Issue #10 - Detailed SRS & Refined Product Backlog` (`feature/10-srs-refined-backlog`)
 
 ---
@@ -37,7 +37,7 @@ This document outlines the individual contributions, GitHub tracking history, Is
   * Designed the complete **C4 Model hierarchy** (Level 1 System Context, Level 2 Container, Level 3 Component, Level 4 Code Blueprint).
   * Modeled the **UML Diagrams Suite**: Use-Case Diagram, Domain/Class Diagram (with optimistic lock `version` attributes), Sequence Diagrams for HTTP 409 Checkout Race Resolution and Atomic Courier Claim/QR Verification, and State Machine Diagrams for Order and Listing lifecycles.
 * **Traceability Links:**
-  * **Sprint 1 GitHub Issue:** [Issue #3 - OpenAPI 3.1.0 Contract & System Architecture](https://github.com/macig102/rescuebite-surplus-food-market/issues/3)
+  * **Sprint 1 GitHub Issue:** [Issue #3 - OpenAPI 3.1.0 Contract & System Architecture](https://github.com/azra-428/rescuebite-surplus-food-market/issues/3)
   * **Sprint 2 GitHub Issue & Branch:** `Issue #13 - Software Architecture, C4 Models & UML Diagrams` (`feature/13-c4-uml-architecture`)
 
 ---
@@ -55,9 +55,9 @@ This document outlines the individual contributions, GitHub tracking history, Is
   * Facilitated and documented the **Sprint 1 Retrospective**, **Sprint 2 Stand-up Cadence Logs**, and **Impediment Tracking Log (`IMP-01`–`IMP-04`)**.
   * Co-led **Product Backlog Refinement** and compiled the **End-to-End Requirement-to-Artifact Traceability Matrix** (`FR` $\leftrightarrow$ `US` $\leftrightarrow$ `OpenAPI` $\leftrightarrow$ `Figma Screen` $\leftrightarrow$ `C4/UML` $\leftrightarrow$ `GitHub Issue/PR`).
 * **Traceability Links:**
-  * **Sprint 1 GitHub Issue:** [Issue #9 - Agile Sprint Board & RACI Administration](https://github.com/macig102/rescuebite-surplus-food-market/issues/9)
+  * **Sprint 1 GitHub Issue:** [Issue #9 - Agile Sprint Board & RACI Administration](https://github.com/azra-428/rescuebite-surplus-food-market/issues/9)
   * **Sprint 2 GitHub Issue & Branch:** `SCRUM-02 - Sprint 2 RACI Matrix, Agile Board & Refined Backlog` (`feature/SCRUM-02-sprint2-agile-backlog`)
-  * **Pull Request & Commits:** Verified in repository history under `https://github.com/macig102/rescuebite-surplus-food-market`.
+  * **Pull Request & Commits:** Verified in repository history under `https://github.com/azra-428/rescuebite-surplus-food-market`.
 
 ---
 
@@ -74,7 +74,7 @@ This document outlines the individual contributions, GitHub tracking history, Is
   * Formulated the 6 **SEI Quality Attribute Scenarios (`QAS-01`–`QAS-06`)** with stimulus, architectural response, and quantitative SLA response measures.
   * Co-verified the UML Sequence and State Machine diagrams for negative test coverage and executed the **Sprint 2 Rubric Quality Audit**.
 * **Traceability Links:**
-  * **Sprint 1 GitHub Issue:** [Issue #6 - Acceptance Criteria & Quality Assurance Audit](https://github.com/macig102/rescuebite-surplus-food-market/issues/6)
+  * **Sprint 1 GitHub Issue:** [Issue #6 - Acceptance Criteria & Quality Assurance Audit](https://github.com/azra-428/rescuebite-surplus-food-market/issues/6)
   * **Sprint 2 GitHub Issue & Branch:** `Issue #11 - Non-Functional Requirements & Quality Measures` (`feature/11-nfr-quality-measures`) & `Issue #15 - Sprint 2 Quality Audit`
 
 ---
@@ -92,7 +92,7 @@ This document outlines the individual contributions, GitHub tracking history, Is
   * Contributed infrastructure, availability, and CI test-coverage gate specifications (`NFR-REL-01`, `NFR-MAINT-01`, `NFR-COMP-01`).
   * Audited Git-Flow Pull Request merges into `develop` and executed the **`v0.2.0-sprint2`** release packaging workflow.
 * **Traceability Links:**
-  * **Sprint 1 GitHub Issue:** [Issue #5 - Git-Flow Policy, Repository Governance & Templates](https://github.com/macig102/rescuebite-surplus-food-market/issues/5)
+  * **Sprint 1 GitHub Issue:** [Issue #5 - Git-Flow Policy, Repository Governance & Templates](https://github.com/azra-428/rescuebite-surplus-food-market/issues/5)
   * **Sprint 2 GitHub Issue & Branch:** `Issue #16 - Git-Flow Release Governance & v0.2.0-sprint2 Tag` (`release/v0.2.0-sprint2`)
 
 ---
@@ -111,4 +111,4 @@ This document outlines the individual contributions, GitHub tracking history, Is
 * **Traceability Links:**
   * **Sprint 1 GitHub Issue:** Linked feature development and integration tasks.
   * **Sprint 2 GitHub Issue & Branch:** `Issue #14 - Figma UI/UX Prototypes & Actor User-Flow Diagrams` (`feature/14-figma-ui-userflows`)
-  * **Pull Request & Commits:** Verified in repository history under `https://github.com/macig102/rescuebite-surplus-food-market`.
+  * **Pull Request & Commits:** Verified in repository history under `https://github.com/azra-428/rescuebite-surplus-food-market`.
