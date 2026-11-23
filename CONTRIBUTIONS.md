@@ -14,7 +14,7 @@ This document outlines the individual contributions, GitHub tracking history, an
   * Owned requirements and scope definition for Food Waste Rescued Metrics (US-08).
 - **Traceability Links:**
   * **GitHub Issue:** [Issue #4 - Project Proposal & Requirements Definition](https://github.com/macig102/rescuebite-surplus-food-market/issues/4)
-  * **Pull Request & Commits:** Verified in repository history under `https://github.com/macig102/rescuebite-surplus-food-market` (Branch integration via PR into `develop`).
+  * **Pull Request & Commits:** Verified in repository history under `https://github.com/azra-428/rescuebite-surplus-food-market` (Branch integration via PR into `develop`).
 
 ---
 
@@ -28,7 +28,7 @@ This document outlines the individual contributions, GitHub tracking history, an
   * Architected backend schemas and endpoints for Store Approval (US-01), Surplus Food Listing Creation with transparent items (US-02), Order Reservation with concurrency lock (US-04), Store Order Preparation Status Transitions, and Courier Claim (US-06).
 - **Traceability Links:**
   * **GitHub Issue:** [Issue #3 - OpenAPI 3.1.0 Contract & System Architecture](https://github.com/macig102/rescuebite-surplus-food-market/issues/3)
-  * **Pull Request & Commits:** Verified in repository history under `https://github.com/macig102/rescuebite-surplus-food-market`.
+  * **Pull Request & Commits:** Verified in repository history under `https://github.com/azra-428/rescuebite-surplus-food-market`.
 
 ---
 
@@ -41,7 +41,7 @@ This document outlines the individual contributions, GitHub tracking history, an
   * Authored the team Roles breakdown and RACI Responsibility Matrix aligned with the official BM321 rubric.
 - **Traceability Links:**
   * **GitHub Issue:** [Issue #9 - Agile Sprint Board & RACI Administration](https://github.com/macig102/rescuebite-surplus-food-market/issues/9)
-  * **Pull Request & Commits:** Verified in repository history under `https://github.com/macig102/rescuebite-surplus-food-market`.
+  * **Pull Request & Commits:** Verified in repository history under `https://github.com/azra-428/rescuebite-surplus-food-market`.
 
 ---
 
@@ -55,7 +55,7 @@ This document outlines the individual contributions, GitHub tracking history, an
   * Executed the Sprint 1 Quality & Evidence Audit against the course submission checklist.
 - **Traceability Links:**
   * **GitHub Issue:** [Issue #6 - Acceptance Criteria & Quality Assurance Audit](https://github.com/macig102/rescuebite-surplus-food-market/issues/6)
-  * **Pull Request & Commits:** Verified in repository history under `https://github.com/macig102/rescuebite-surplus-food-market`.
+  * **Pull Request & Commits:** Verified in repository history under `https://github.com/azra-428/rescuebite-surplus-food-market`.
 
 ---
 
@@ -69,7 +69,7 @@ This document outlines the individual contributions, GitHub tracking history, an
   * Prepared initial repository infrastructure for future CI/CD pipeline integration.
 - **Traceability Links:**
   * **GitHub Issue:** [Issue #5 - Git-Flow Policy, Repository Governance & Templates](https://github.com/macig102/rescuebite-surplus-food-market/issues/5)
-  * **Pull Request & Commits:** Verified in repository history under `https://github.com/macig102/rescuebite-surplus-food-market`.
+  * **Pull Request & Commits:** Verified in repository history under `https://github.com/azra-428/rescuebite-surplus-food-market`.
 
 ---
 
@@ -82,4 +82,4 @@ This document outlines the individual contributions, GitHub tracking history, an
   * Supported system testing, debugging, and technical documentation consolidation for Sprint 1 deliverables.
 - **Traceability Links:**
   * **GitHub Issue:** Linked feature development and integration tasks.
-  * **Pull Request & Commits:** Verified in repository history under `https://github.com/macig102/rescuebite-surplus-food-market`.
+  * **Pull Request & Commits:** Verified in repository history under `https://github.com/azra-428/rescuebite-surplus-food-market`.
