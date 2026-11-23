@@ -38,6 +38,20 @@
 
 ---
 
+## 🎨 Sprint 2 UI/UX Design & User-Flow Deliverables (Task B-4)
+- **Assignee:** Muhammed Fatih Ağaç (*Implementation and Integration Engineer*)
+- **Figma Project:** [RescueBite UI on Figma](https://www.figma.com/design/YqnIJn9K1PqsI2ZgTn2QHu/RescueBite-UI?node-id=0-1&t=RQDhqyHRI2qhTiVm-1) *(View-Only Link)*
+- **Design Specification & Documentation:** [`docs/sprint2/design/README.md`](docs/sprint2/design/README.md)
+- **High-Resolution Prototype Exports:**
+  - 🏠 **Home / Dashboard:** [`docs/sprint2/design/Home.png`](docs/sprint2/design/Home.png)
+  - 📋 **Offer List (Catalog & Proximity Map):** [`docs/sprint2/design/OfferList.png`](docs/sprint2/design/OfferList.png)
+  - 📝 **Create Offer Form (Itemized Surplus Breakdown):** [`docs/sprint2/design/CreateOffer.png`](docs/sprint2/design/CreateOffer.png)
+  - 🤝 **Claim Offer Workflow (Dynamic QR Handover):** [`docs/sprint2/design/ClaimOffer.png`](docs/sprint2/design/ClaimOffer.png)
+  - 🛡️ **Admin Governance & Compliance Panel:** [`docs/sprint2/design/AdminPanel.png`](docs/sprint2/design/AdminPanel.png)
+  - 🔄 **End-to-End User Flow Diagram:** [`docs/sprint2/design/Flow.png`](docs/sprint2/design/Flow.png)
+
+---
+
 ## 🚀 Sprint 1 Project Scope & Setup Instructions
 
 ### Sprint 1 Scope Notice

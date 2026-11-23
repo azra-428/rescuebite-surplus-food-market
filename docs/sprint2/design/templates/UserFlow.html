@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RescueBite - UI/UX End-to-End User Flow</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    body { background-color: #0F172A; color: #F8FAFC; padding: 36px; min-height: 100vh; }
+
+    .header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid #10B981;
+      color: #34D399;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    h1 { font-size: 28px; font-weight: 800; color: #FFFFFF; margin-bottom: 6px; }
+    p { font-size: 14px; color: #94A3B8; max-width: 800px; margin: 0 auto; }
+
+    /* Flow Layout */
+    .flow-container {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      position: relative;
+    }
+
+    /* Column */
+    .actor-column {
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .actor-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #334155;
+    }
+    .actor-avatar {
+      width: 36px; height: 36px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center; font-size: 18px;
+    }
+    .actor-title h3 { font-size: 15px; font-weight: 800; color: #FFFFFF; }
+    .actor-title span { font-size: 11px; color: #94A3B8; }
+
+    /* Flow Cards */
+    .flow-card {
+      background: #0F172A;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 16px;
+      position: relative;
+      transition: all 0.2s;
+    }
+    .flow-card.screen-node {
+      border: 2px solid #10B981;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+    }
+    .screen-tag {
+      font-size: 10px;
+      font-weight: 800;
+      color: #10B981;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .flow-card h4 { font-size: 14px; font-weight: 700; color: #F1F5F9; margin-bottom: 6px; }
+    .flow-card p { font-size: 12px; color: #94A3B8; line-height: 1.4; margin: 0; }
+    .card-meta {
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px dashed #334155;
+      font-size: 11px;
+      color: #38BDF8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Arrows / Connections */
+    .arrow-down {
+      text-align: center;
+      color: #64748B;
+      font-size: 18px;
+      font-weight: bold;
+      margin: -6px 0;
+    }
+    .cross-action {
+      background: #334155;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #E2E8F0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Summary Bar */
+    .flow-summary {
+      max-width: 1360px;
+      margin: 28px auto 0;
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: #CBD5E1;
+    }
+    .flow-summary strong { color: #34D399; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="badge">RescueBite Architecture & Interaction Spec</div>
+    <h1>End-to-End User Flow & Screen Transition Map</h1>
+    <p>Mapping screen transitions and actor responsibilities across Store Merchants, Customers, Delivery Couriers, and Platform Governance.</p>
+  </header>
+
+  <div class="flow-container">
+    <!-- Lane 1: Store Merchant -->
+    <div class="actor-column">
+      <div class="actor-head">
+        <div class="actor-avatar" style="background:#F59E0B; color:white;">🏪</div>
+        <div class="actor-title">
+          <h3>Store Merchant</h3>
+          <span>Bakery / Cafe / Grocer</span>
+        </div>
+      </div>
+
+      <div class="flow-card">
+        <div class="screen-tag">Phase 1: Registration</div>
+        <h4>Merchant Onboarding</h4>
+        <p>Submits business tax ID and food hygiene certification to platform.</p>
+        <div class="card-meta">Awaits Admin approval</div>
+      </div>
+
+      <div class="arrow-down">↓</div>
+
+      <div class="flow-card screen-node">
+        <div class="screen-tag">Screen 3 • Figma Target</div>
+        <h4>Create Offer Screen</h4>
+        <p>Itemizes surplus food (quantities, allergens, safe consumption deadline, and 50-70% discount).</p>
+        <div class="card-meta"><code>POST /api/v1/offers</code></div>
+      </div>
+
+      <div class="arrow-down">↓</div>
+
+      <div class="flow-card">
+        <div class="screen-tag">Order Fulfillment</div>
+        <h4>Package Sealed Order</h4>
+        <p>Receives atomic order reservation alert. Packages food with tamper-evident seal.</p>
+        <div class="card-meta">Status: <code>READY_FOR_COURIER</code></div>
+      </div>
+    </div>
+
+    <!-- Lane 2: Consumer Customer -->
+    <div class="actor-column">
+      <div class="actor-head">
+        <div class="actor-avatar" style="background:#10B981; color:white;">👤</div>
+        <div class="actor-title">
+          <h3>Consumer Customer</h3>
+          <span>Neighborhood Resident</span>
+        </div>
+      </div>
+
+      <div class="flow-card screen-node">
+        <div class="screen-tag">Screen 1 • Figma Target</div>
+        <h4>Home / Dashboard</h4>
+        <p>Explores surplus food impact, category pills, and live deals within walking distance.</p>
+        <div class="card-meta">Tap "Browse Active Deals"</div>
+      </div>
+
+      <div class="arrow-down">↓</div>
+
+      <div class="flow-card screen-node">
+        <div class="screen-tag">Screen 2 • Figma Target</div>
+        <h4>Offer List Screen</h4>
+        <p>Filters by allergen exclusions, price discounts, and radius map. Reviews itemized contents.</p>
+        <div class="card-meta">Tap "Reserve Offer"</div>
+      </div>
+
+      <div class="arrow-down">↓</div>
+
+      <div class="flow-card screen-node">
+        <div class="screen-tag">Screen 4 • Figma Target</div>
+        <h4>Claim Offer & Handover</h4>
+        <p>Tracks live courier arrival. Displays single-use dynamic QR code at the doorstep.</p>
+        <div class="card-meta">QR refreshes every 60s</div>
+      </div>
+    </div>
+
+    <!-- Lane 3: Delivery Courier -->
+    <div class="actor-column">
+      <div class="actor-head">
+        <div class="actor-avatar" style="background:#3B82F6; color:white;">🚴</div>
+        <div class="actor-title">
+          <h3>Delivery Courier</h3>
+          <span>Eco Cargo Courier</span>
+        </div>
+      </div>
+
+      <div class="flow-card">
+        <div class="screen-tag">Job Dispatch</div>
+        <h4>Available Pickups Feed</h4>
+        <p>Views nearby packages marked as ready for courier pickup in Kadıköy radius.</p>
+        <div class="card-meta">Atomic claim assignment</div>
+      </div>
+
+      <div class="arrow-down">↓</div>
+
+      <div class="flow-card">
+        <div class="screen-tag">Store Pickup</div>
+        <h4>Collect from Bakery</h4>
+        <p>Picks up sealed bag from merchant and initiates rapid bicycle transit to recipient.</p>
+        <div class="card-meta">Status: <code>IN_TRANSIT</code></div>
+      </div>
+
+      <div class="arrow-down">↓</div>
+
+      <div class="flow-card">
+        <div class="screen-tag">Doorstep Handover</div>
+        <h4>Scan Customer QR Code</h4>
+        <p>Scans the dynamic single-use QR on customer's phone to verify physical handover.</p>
+        <div class="card-meta">Status: <code>DELIVERED</code></div>
+      </div>
+    </div>
+
+    <!-- Lane 4: Platform Admin -->
+    <div class="actor-column">
+      <div class="actor-head">
+        <div class="actor-avatar" style="background:#8B5CF6; color:white;">🛡️</div>
+        <div class="actor-title">
+          <h3>Platform Admin</h3>
+          <span>Governance & Safety</span>
+        </div>
+      </div>
+
+      <div class="flow-card screen-node">
+        <div class="screen-tag">Screen 5 • Figma Target</div>
+        <h4>Admin Panel Screen</h4>
+        <p>Inspects municipality permits and food hygiene licenses submitted by new stores.</p>
+        <div class="card-meta"><code>PATCH /stores/{id}/approval</code></div>
+      </div>
+
+      <div class="arrow-down">↓</div>
+
+      <div class="flow-card">
+        <div class="screen-tag">Concurrency Guard</div>
+        <h4>Atomic Inventory Audit</h4>
+        <p>Prevents double-booking via HTTP 409 Conflict logic when last stock unit is claimed.</p>
+        <div class="card-meta">Zero overselling guarantee</div>
+      </div>
+
+      <div class="arrow-down">↓</div>
+
+      <div class="flow-card">
+        <div class="screen-tag">Ecosystem Health</div>
+        <h4>Impact & Audit Stream</h4>
+        <p>Tracks cumulative meals saved, CO₂ reduction, and resolves courier-customer escalations.</p>
+        <div class="card-meta">99.8% Safety Compliance</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flow-summary">
+    <div><strong>Design Prototype Deliverable:</strong> All 5 interactive screens and this user-flow diagram are mapped and linked in Figma Prototype mode.</div>
+    <div>Strictly No Mystery Boxes • 100% Itemized • Cryptographic Doorstep Handover</div>
+  </div>
+
+</body>
+</html>
