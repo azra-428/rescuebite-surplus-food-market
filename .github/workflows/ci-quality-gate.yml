@@ -1,0 +1,51 @@
+name: RescueBite Quality & OpenAPI Contract CI Gate
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+  push:
+    branches: [ main, develop ]
+
+jobs:
+  quality-and-contract-audit:
+    name: Sprint 2 Quality & OpenAPI 3.1.0 Contract Verification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Verify Core Repository & Sprint Deliverable Files
+        run: |
+          test -f api/openapi.yaml
+          test -f docs/sprint1/SPRINT1_REPORT.md
+          test -f CONTRIBUTIONS.md
+          test -f README.md
+          echo "Core repository deliverables verified."
+
+      - name: Setup Python for OpenAPI YAML & Domain Rule Audit
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Execute Automated OpenAPI 3.1.0 & Business Rule Test Suite
+        run: |
+          pip install pyyaml
+          python -c "
+          import yaml
+          with open('api/openapi.yaml', 'r', encoding='utf-8') as f:
+              spec = yaml.safe_load(f)
+          assert spec.get('openapi') == '3.1.0', 'Must be OpenAPI 3.1.0'
+          paths = spec.get('paths', {})
+          required_paths = [
+              '/listings', '/listings/{listingId}', '/orders',
+              '/orders/{orderId}', '/orders/{orderId}/status',
+              '/deliveries/available', '/deliveries/{orderId}/claim',
+              '/deliveries/{orderId}/verify-qr',
+              '/admin/stores/{storeId}/approve', '/metrics/food-waste'
+          ]
+          for p in required_paths:
+              assert p in paths, f'Missing required path {p}'
+          schemas = spec.get('components', {}).get('schemas', {})
+          assert schemas['NewSurplusFoodListing']['properties']['items']['minItems'] == 1, 'BR-01 Zero Mystery Box rule violated'
+          print('ALL OPENAPI 3.1.0 CONTRACT & DOMAIN RULE TESTS PASSED!')
+          "
