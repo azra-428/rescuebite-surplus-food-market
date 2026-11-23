@@ -2,10 +2,10 @@
 
 This document outlines the individual contributions, GitHub tracking history, Issue/PR traceability, and official **BM321 Software Engineering Rubric** responsibilities of each team member across **Sprint 1 (`v0.1.0-sprint1`)** and **Sprint 2 (`v0.2.0-sprint2`)**.
 
-* **GitHub Repository:** `https://github.com/macig102/rescuebite-surplus-food-market`
-* **Release Tags:** `v0.1.0-sprint1` (Sprint 1) | `v0.2.0-sprint2` (Sprint 2)
+- **GitHub Repository:** `https://github.com/azra-428/rescuebite-surplus-food-market`
+- **Release Tags:** `v0.1.0-sprint1` (Sprint 1) | `v0.2.0-sprint2` (Sprint 2)
 
----
+----
 
 ### 1. Zeynep Bozdemir (230203005)
 * **GitHub Username:** `zeynepbozdemirrr`
