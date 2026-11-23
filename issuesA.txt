@@ -1,0 +1,11 @@
+# Sprint 2 GitHub Issues Registry (Task A7 Output)
+# Repository: https://github.com/azra-428/rescuebite-surplus-food-market
+# Created By: Anıl Güngör (@anlgr - Scrum Master and Agile Process Coach)
+
+Issue #18 | [SPRINT-2]: Detailed SRS & Refined Product Backlog | Assignee: zeynepbozdemirrr (Zeynep Bozdemir) | https://github.com/azra-428/rescuebite-surplus-food-market/issues/18
+Issue #19 | [SPRINT-2]: Non-Functional Requirements (NFR) & Quality Measures | Assignee: tugce-951 (Tuğçe Ertem) | https://github.com/azra-428/rescuebite-surplus-food-market/issues/19
+Issue #20 | [SCRUM-02]: Sprint 2 RACI Matrix & Agile Process Governance | Assignee: anlgr (Anıl Güngör) | https://github.com/azra-428/rescuebite-surplus-food-market/issues/20
+Issue #21 | [SPRINT-2]: Software Architecture Documentation (C4 Models & UML Diagrams) | Assignee: mehmetkocagozz (Mehmet Kocagöz) | https://github.com/azra-428/rescuebite-surplus-food-market/issues/21
+Issue #22 | [SPRINT-2]: Figma UI/UX Prototypes & Actor User-Flow Diagrams | Assignee: macig102 (Muhammed Fatih Ağaç) | https://github.com/azra-428/rescuebite-surplus-food-market/issues/22
+Issue #23 | [SPRINT-2]: Sprint 2 Quality Audit, Test Plan & Revised DoD Review | Assignees: anlgr, tugce-951 (Anıl Güngör & Tuğçe Ertem) | https://github.com/azra-428/rescuebite-surplus-food-market/issues/23
+Issue #24 | [SPRINT-2]: Sprint 2 Release Packaging & v0.2.0-sprint2 Tag | Assignee: azra-428 (Azra Dostbil) | https://github.com/azra-428/rescuebite-surplus-food-market/issues/24

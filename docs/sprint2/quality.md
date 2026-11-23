@@ -7,6 +7,7 @@
 **Prepared By:**  
 - **Tuğçe Ertem (230201047)** — *Quality Assurance and Test Automation Engineer* (`@tugce-951`)  
 - **Anıl Güngör (220205003)** — *Scrum Master and Agile Process Coach* (`@anlgr`)  
+**GitHub Issue Reference:** [Issue #23 - [SPRINT-2]: Sprint 2 Quality Audit, Test Plan & Revised DoD Review](https://github.com/azra-428/rescuebite-surplus-food-market/issues/23)  
 **Target Release Tag:** `v0.2.0-sprint2`  
 
 ---

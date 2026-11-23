@@ -104,16 +104,16 @@ As required by **Task A6 (`Sprint 1 Issue linklerini kontrol et`)**, all issue a
 
 The table below tracks the live repository status of each Sprint 2 work package in strict alignment with the team's **A1–A10** and **B1–B9** work breakdown:
 
-| Task Code | Sprint 2 Deliverable / Work Package | Responsible Owner (GitHub) | Target File / Artifact in Repository | Current Repository Status |
-|:---:|---|---|---|---|
-| **A1–A3** | Collaborator Invitations & `develop` Branch Standardization | **Muhammed Fatih Ağaç** (`@macig102`) | GitHub Settings & `develop` branch | **Completed (`develop` active)** |
-| **A4–A5** | Branch Protection (`protect-main`) & `v0.1.0-sprint1` Tag Verification | **Azra Dostbil** (`@azra-428`) | GitHub Rulesets & Releases (`v0.1.0-sprint1`) | **Completed (`v0.1.0-sprint1` verified)** |
-| **A6** | Sprint 1 Issue Links Audit (`#2, #3, #4, #5, #6, #7, #9`) & `CONTRIBUTIONS.md` Fix | **Anıl Güngör** (`@anlgr`) | [`CONTRIBUTIONS.md`](../../CONTRIBUTIONS.md) & Section 4 above | **Completed (Merged via PR #16)** |
-| **SCRUM-02** | Sprint 2 RACI Matrix, Agile Ceremonies & Impediment Governance | **Anıl Güngör** (`@anlgr`) | [`docs/sprint2/AGILE_AND_RACI_GOVERNANCE.md`](AGILE_AND_RACI_GOVERNANCE.md) | **Completed (Merged via [PR #16](https://github.com/macig102/rescuebite-surplus-food-market/pull/16))** |
-| **B1** | Detailed Software Requirements Specification (SRS) | **Zeynep Bozdemir** (`@zeynepbozdemirrr`) | `docs/sprint2/SRS.md` | **In Progress (Assigned to Zeynep)** |
-| **B2** | Refined Product Backlog (Sprint 2) | **Zeynep Bozdemir** (`@zeynepbozdemirrr`) | `docs/sprint2/Backlog.md` | **In Progress (Assigned to Zeynep)** |
-| **B3** | Non-Functional Requirements (NFR) & Quality Measures | **Tuğçe Ertem** (`@tugce-951`) | `docs/sprint2/NFR.md` | **In Progress (Assigned to Tuğçe)** |
-| **B4** | Figma UI/UX Prototypes & User-Flow Diagrams | **Muhammed Fatih Ağaç** (`@macig102`) | `docs/sprint2/design/` & `README.md` | **In Progress (Assigned to Fatih)** |
-| **B5** | Software Architecture: C4 Model & UML Diagrams | **Mehmet Kocagöz** (`@mehmetkocagozz`) | `docs/sprint2/architecture/` & `README.md` | **In Progress (Assigned to Mehmet)** |
-| **B6** | Sprint 2 Quality Audit (Test Plan, Revised DoD & Verification Report) | **Anıl Güngör** (`@anlgr`) & **Tuğçe Ertem** (`@tugce-951`) | [`docs/sprint2/quality.md`](quality.md) | **Completed (Authored & Submitted to `develop`)** |
-| **B7** | Release `v0.2.0-sprint2` Tag & GitHub Release Packaging | **Azra Dostbil** (`@azra-428`) | GitHub Release `v0.2.0-sprint2` | **Scheduled after B1–B6 PR Merges** |
+| Task Code | GitHub Issue | Sprint 2 Deliverable / Work Package | Responsible Owner (GitHub) | Target File / Artifact in Repository | Current Repository Status |
+|:---:|:---:|---|---|---|---|
+| **A1–A3** | — | Collaborator Invitations & `develop` Branch Standardization | **Muhammed Fatih Ağaç** (`@macig102`) | GitHub Settings & `develop` branch | **Completed (`develop` active)** |
+| **A4–A5** | — | Branch Protection (`protect-main`) & `v0.1.0-sprint1` Tag Verification | **Azra Dostbil** (`@azra-428`) | GitHub Rulesets & Releases (`v0.1.0-sprint1`) | **Completed (`v0.1.0-sprint1` verified)** |
+| **A6 & A7** | [#18–#24](https://github.com/azra-428/rescuebite-surplus-food-market/issues) | Sprint 1 Issue Links Audit (`#2`–`#9`) & Sprint 2 Issues Creation (`#18`–`#24`) | **Anıl Güngör** (`@anlgr`) | [`CONTRIBUTIONS.md`](../../CONTRIBUTIONS.md) & [`issuesA.txt`](../../issuesA.txt) | **Completed (All 7 Issues Created & Assigned)** |
+| **SCRUM-02** | [Issue #20](https://github.com/azra-428/rescuebite-surplus-food-market/issues/20) | Sprint 2 RACI Matrix, Agile Ceremonies & Impediment Governance | **Anıl Güngör** (`@anlgr`) | [`docs/sprint2/AGILE_AND_RACI_GOVERNANCE.md`](AGILE_AND_RACI_GOVERNANCE.md) | **Completed (Merged via [PR #16](https://github.com/azra-428/rescuebite-surplus-food-market/pull/16))** |
+| **B1** | [Issue #18](https://github.com/azra-428/rescuebite-surplus-food-market/issues/18) | Detailed Software Requirements Specification (SRS) | **Zeynep Bozdemir** (`@zeynepbozdemirrr`) | `docs/sprint2/SRS.md` | **In Progress (Assigned to Zeynep)** |
+| **B2** | [Issue #18](https://github.com/azra-428/rescuebite-surplus-food-market/issues/18) | Refined Product Backlog (Sprint 2) | **Zeynep Bozdemir** (`@zeynepbozdemirrr`) | `docs/sprint2/Backlog.md` | **In Progress (Assigned to Zeynep)** |
+| **B3** | [Issue #19](https://github.com/azra-428/rescuebite-surplus-food-market/issues/19) | Non-Functional Requirements (NFR) & Quality Measures | **Tuğçe Ertem** (`@tugce-951`) | `docs/sprint2/NFR.md` | **In Progress (Assigned to Tuğçe)** |
+| **B4** | [Issue #22](https://github.com/azra-428/rescuebite-surplus-food-market/issues/22) | Figma UI/UX Prototypes & User-Flow Diagrams | **Muhammed Fatih Ağaç** (`@macig102`) | `docs/sprint2/design/` & `README.md` | **In Progress (Assigned to Fatih)** |
+| **B5** | [Issue #21](https://github.com/azra-428/rescuebite-surplus-food-market/issues/21) | Software Architecture: C4 Model & UML Diagrams | **Mehmet Kocagöz** (`@mehmetkocagozz`) | `docs/sprint2/architecture/` & `README.md` | **In Progress (Assigned to Mehmet)** |
+| **B6** | [Issue #23](https://github.com/azra-428/rescuebite-surplus-food-market/issues/23) | Sprint 2 Quality Audit (Test Plan, Revised DoD & CI Verification) | **Anıl Güngör** (`@anlgr`) & **Tuğçe Ertem** (`@tugce-951`) | [`docs/sprint2/quality.md`](quality.md) & [`.github/workflows/ci-quality-gate.yml`](../../.github/workflows/ci-quality-gate.yml) | **Completed (Submitted for PR Merge)** |
+| **B7** | [Issue #24](https://github.com/azra-428/rescuebite-surplus-food-market/issues/24) | Release `v0.2.0-sprint2` Tag & GitHub Release Packaging | **Azra Dostbil** (`@azra-428`) | GitHub Release `v0.2.0-sprint2` | **Scheduled after B1–B6 PR Merges** |
