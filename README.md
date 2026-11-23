@@ -38,6 +38,20 @@
 
 ---
 
+## 🎨 Sprint 2 UI/UX Design & User-Flow Deliverables (Task B-4)
+- **Assignee:** Muhammed Fatih Ağaç (*Implementation and Integration Engineer*)
+- **Figma Project:** [RescueBite UI on Figma](https://www.figma.com/design/YqnIJn9K1PqsI2ZgTn2QHu/RescueBite-UI?node-id=0-1&t=RQDhqyHRI2qhTiVm-1) *(View-Only Link)*
+- **Design Specification & Documentation:** [`docs/sprint2/design/README.md`](docs/sprint2/design/README.md)
+- **High-Resolution Prototype Exports:**
+  - 🏠 **Home / Dashboard:** [`docs/sprint2/design/Home.png`](docs/sprint2/design/Home.png)
+  - 📋 **Offer List (Catalog & Proximity Map):** [`docs/sprint2/design/OfferList.png`](docs/sprint2/design/OfferList.png)
+  - 📝 **Create Offer Form (Itemized Surplus Breakdown):** [`docs/sprint2/design/CreateOffer.png`](docs/sprint2/design/CreateOffer.png)
+  - 🤝 **Claim Offer Workflow (Dynamic QR Handover):** [`docs/sprint2/design/ClaimOffer.png`](docs/sprint2/design/ClaimOffer.png)
+  - 🛡️ **Admin Governance & Compliance Panel:** [`docs/sprint2/design/AdminPanel.png`](docs/sprint2/design/AdminPanel.png)
+  - 🔄 **End-to-End User Flow Diagram:** [`docs/sprint2/design/Flow.png`](docs/sprint2/design/Flow.png)
+
+---
+
 ## 🚀 Sprint 1 Project Scope & Setup Instructions
 
 ### Sprint 1 Scope Notice
@@ -54,3 +68,13 @@ cat api/openapi.yaml
 # npx @redocly/cli lint api/openapi.yaml
 ```
 The contract validates against OpenAPI 3.1.0 standards and includes complete request/response schemas, RFC 7807/9457 Problem Details, and HTTP 409 Conflict error scenarios.
+
+---
+
+## 🏗️ Sprint 2 Architecture Documentation (C4 & UML)
+All architecture diagrams are stored in `docs/sprint2/architecture/` and aligned with `api/openapi.yaml`:
+
+- **C4 Context Diagram (`c4-context.png`):** Shows interactions between RescueBite, primary actors (Customer, Approved Store, Courier, Admin), and external services (Identity Provider, Payment Gateway, Notification Service).
+- **C4 Container Diagram (`c4-container.png`):** Details the high-level technical building blocks (Web/Mobile UI, REST API Service, Auth Service, Primary Database).
+- **C4 Component Diagram (`c4-component.png`):** Breaks down internal API Service components (Listing, Order, Delivery & QR, Store Approval, Food Waste Metrics, and Notification Handler).
+- **UML Class Diagram (`uml-class.png`):** Models the core domain entities (`StoreSummary`, `SurplusFoodListing`, `ListingItem`, `Order`, `FoodWasteMetrics`), their attributes, and relationships.

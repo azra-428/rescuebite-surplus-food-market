@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RescueBite - Create Surplus Offer</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    body { background-color: #F8FAFC; color: #1E293B; line-height: 1.5; }
+
+    /* Navbar */
+    .navbar {
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+      padding: 12px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-group { display: flex; align-items: center; gap: 10px; }
+    .logo-badge {
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      color: white; width: 36px; height: 36px; border-radius: 9px;
+      display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px;
+    }
+    .logo-text { font-size: 20px; font-weight: 800; color: #0F172A; }
+    .store-badge {
+      background: #ECFDF5; border: 1px solid #A7F3D0; color: #065F46;
+      font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 20px;
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    /* Container */
+    .container { max-width: 980px; margin: 28px auto; padding: 0 20px; }
+
+    /* Step Tracker */
+    .stepper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      position: relative;
+    }
+    .step-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #94A3B8;
+    }
+    .step-item.active { color: #059669; }
+    .step-circle {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: #E2E8F0; color: #64748B;
+      display: flex; align-items: center; justify-content: center; font-size: 12px;
+    }
+    .step-item.active .step-circle { background: #10B981; color: white; }
+
+    /* Main Form Card */
+    .form-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 32px 36px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+    .form-head {
+      margin-bottom: 24px;
+      border-bottom: 1px solid #F1F5F9;
+      padding-bottom: 16px;
+    }
+    .form-head h1 { font-size: 22px; font-weight: 800; color: #0F172A; margin-bottom: 4px; }
+    .form-head p { font-size: 14px; color: #64748B; }
+
+    .form-group { margin-bottom: 22px; }
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 8px;
+    }
+    .form-input, .form-select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #1E293B;
+      outline: none;
+    }
+    .form-input:focus { border-color: #10B981; }
+
+    /* Itemized Table Box */
+    .item-table-box {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 22px;
+    }
+    .table-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .item-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 40px;
+      gap: 12px;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    .btn-add-item {
+      background: #FFFFFF;
+      border: 1px dashed #059669;
+      color: #059669;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Grid 2-col */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+    /* Price Highlight Box */
+    .price-box {
+      background: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      border-radius: 10px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+    .price-calc { font-size: 13px; color: #065F46; }
+    .price-calc strong { font-size: 20px; color: #047857; }
+    .discount-pill { background: #059669; color: white; padding: 4px 10px; border-radius: 6px; font-weight: 800; font-size: 12px; }
+
+    /* Allergen Checklist */
+    .allergen-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .allergen-check {
+      background: #F1F5F9;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+    .allergen-check.checked { background: #E0E7FF; color: #3730A3; border: 1px solid #C7D2FE; }
+
+    /* Compliance checkbox */
+    .compliance-box {
+      background: #FEF3C7;
+      border: 1px solid #FDE68A;
+      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 24px;
+      font-size: 12px;
+      color: #92400E;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    /* Actions */
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 14px;
+      border-top: 1px solid #F1F5F9;
+      padding-top: 20px;
+    }
+    .btn-secondary {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      color: #475569;
+      padding: 11px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .btn-submit {
+      background: #10B981;
+      border: none;
+      color: white;
+      padding: 11px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(16,185,129,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo-group">
+      <div class="logo-badge">R</div>
+      <div class="logo-text">RescueBite <span>Partner</span></div>
+    </div>
+    <div class="store-badge">
+      <span>🏪</span> Maya Artisan Bakery (Kadıköy) • License #TR-34-K-092182
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="stepper">
+      <div class="step-item active">
+        <div class="step-circle">1</div>
+        <span>Item Breakdown</span>
+      </div>
+      <div class="step-item active">
+        <div class="step-circle">2</div>
+        <span>Pricing & Inventory</span>
+      </div>
+      <div class="step-item active">
+        <div class="step-circle">3</div>
+        <span>Hygiene & Allergens</span>
+      </div>
+      <div class="step-item">
+        <div class="step-circle">4</div>
+        <span>Publish Listing</span>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <div class="form-head">
+        <h1>Create Transparent Surplus Food Offer</h1>
+        <p>List remaining end-of-day fresh inventory. Transparent item breakdown required (no mystery boxes).</p>
+      </div>
+
+      <!-- Basic Title & Category -->
+      <div class="grid-2">
+        <div class="form-group">
+          <label class="form-label">Offer Bundle Title</label>
+          <input type="text" class="form-input" value="Evening Fresh Sourdough & Viennoiserie Bundle">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Store Food Category</label>
+          <select class="form-select">
+            <option selected>Artisan Bakery & Baked Goods</option>
+            <option>Patisserie & Desserts</option>
+            <option>Sandwich & Delicatessen</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Itemized Breakdown Box -->
+      <div class="item-table-box">
+        <div class="table-title">
+          <span>📋 Itemized Contents Breakdown (Mandatory for Consumer Transparency)</span>
+          <button class="btn-add-item">+ Add Another Item</button>
+        </div>
+
+        <div class="item-row">
+          <input type="text" class="form-input" value="Artisan Whole Wheat Sourdough Loaf (800g)">
+          <input type="text" class="form-input" value="Qty: 2 loaves">
+          <input type="text" class="form-input" value="Baked: Today 08:00">
+          <button style="border:none; background:transparent; color:#EF4444; font-weight:bold; cursor:pointer;">✕</button>
+        </div>
+        <div class="item-row">
+          <input type="text" class="form-input" value="French Butter Croissants (120g each)">
+          <input type="text" class="form-input" value="Qty: 2 pieces">
+          <input type="text" class="form-input" value="Baked: Today 08:30">
+          <button style="border:none; background:transparent; color:#EF4444; font-weight:bold; cursor:pointer;">✕</button>
+        </div>
+        <div class="item-row">
+          <input type="text" class="form-input" value="Cinnamon Swirl Brioche">
+          <input type="text" class="form-input" value="Qty: 1 piece">
+          <input type="text" class="form-input" value="Baked: Today 11:00">
+          <button style="border:none; background:transparent; color:#EF4444; font-weight:bold; cursor:pointer;">✕</button>
+        </div>
+      </div>
+
+      <!-- Pricing & Inventory -->
+      <div class="grid-3">
+        <div class="form-group">
+          <label class="form-label">Original Total Price (₺)</label>
+          <input type="number" class="form-input" value="210.00">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Surplus Rescue Price (₺)</label>
+          <input type="number" class="form-input" value="75.00">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Available Bundles (Stock)</label>
+          <input type="number" class="form-input" value="5">
+        </div>
+      </div>
+
+      <div class="price-box">
+        <div class="price-calc">
+          Discount Calculated: <strong>64% OFF</strong> (Consumer saves ₺135 per bundle)
+        </div>
+        <span class="discount-pill">High Demand Recommended</span>
+      </div>
+
+      <!-- Time Windows -->
+      <div class="grid-2">
+        <div class="form-group">
+          <label class="form-label">Safe Consumption Deadline</label>
+          <input type="text" class="form-input" value="Today, 22:30">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Courier Pickup / Delivery Window</label>
+          <input type="text" class="form-input" value="19:30 - 21:00">
+        </div>
+      </div>
+
+      <!-- Allergen Declaration -->
+      <div class="form-group">
+        <label class="form-label">Declared Allergen Profile (Select all that apply)</label>
+        <div class="allergen-grid">
+          <label class="allergen-check checked"><input type="checkbox" checked> 🌾 Gluten</label>
+          <label class="allergen-check checked"><input type="checkbox" checked> 🥛 Milk / Dairy</label>
+          <label class="allergen-check checked"><input type="checkbox" checked> 🥚 Eggs</label>
+          <label class="allergen-check"><input type="checkbox"> 🥜 Tree Nuts</label>
+          <label class="allergen-check"><input type="checkbox"> 🌰 Peanuts</label>
+          <label class="allergen-check"><input type="checkbox"> 🌱 Soy</label>
+          <label class="allergen-check"><input type="checkbox"> 🐟 Fish / Crustaceans</label>
+          <label class="allergen-check"><input type="checkbox"> ⚪ Sesame</label>
+        </div>
+      </div>
+
+      <!-- Compliance Notice -->
+      <div class="compliance-box">
+        <input type="checkbox" checked style="margin-top:3px; accent-color:#059669;">
+        <div>
+          <strong>Food Safety & Hygiene Guarantee:</strong> I certify under merchant license #TR-34-K-092182 that all listed surplus items were baked today, kept under safe sanitary temperatures, and explicitly match the itemized description without substitution.
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn-secondary">Save as Draft</button>
+        <button class="btn-submit">🚀 Publish Surplus Offer (< 90s)</button>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
